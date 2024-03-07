@@ -31,6 +31,11 @@ const config: Config = {
           800: "rgba(248,147,31, .8)",
           900: "rgba(248,147,31, .9)"
         },
+        neutraldark:{
+          DEFAULT:"#1a2030",
+          background:"rgb(242, 242, 242)"
+        },
+
         greenColor: {
           DEFAULT: "rgba(42,157,143, 1)",
           10: "rgba(42,157,143, .01)",

@@ -33,7 +33,6 @@ const Nav = () => {
   useEffect(() => {
     changeHeader();
   }, [pathname, changeHeader]);
-
   useEffect(() => {
     if (window) {
       window.addEventListener("scroll", changeHeader);
@@ -63,10 +62,10 @@ const Nav = () => {
           linkClassName="font-medium"
         /> */}
         <div className=" min-[1000px]:flex hidden items-center gap-6 text-sm">
-          <Button rounded link={Routes.Login.path}>
+          <Button>
             Login
           </Button>
-          <Button rounded link={Routes.Login.path} type="primary">
+          <Button>
             Open Account
           </Button>
         </div>

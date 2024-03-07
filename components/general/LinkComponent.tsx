@@ -2,7 +2,7 @@ import { LinkComponentProps } from "@/utils/types";
 import Link from "next/link";
 import React from "react";
 
-const LinkComponent: React.FC<LinkComponentProps> = ({
+const LinkComponent: React.FC<LinkComp1onentProps> = ({
   href,
   type,
   showIcon,

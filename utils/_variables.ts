@@ -7,7 +7,12 @@ import {
   SocialMediaList,
   WhatWeDoCardProps
 } from "./types";
-import { CardTick1, Profile2User, ReceiptSearch } from "iconsax-react";
+import { CardTick1, Icon, Profile2User, ReceiptSearch } from "iconsax-react";
+import { HeavyTruck,Export, NeedCar,CarWorth, Electric, test, HatchBack, VanIcon, TruckIcon, TractorIcon, CamperIcon, Excalator, van, saleMaking1,saleMaking2, saleMaking3, saleMaking4 } from "@/assets/images";
+import { title } from "process";
+import { text } from "stream/consumers";
+import Button from "@/components/general/Button";
+import { link } from "fs";
 
 export const siteName = "Akandi Online",
   siteShortName = "Akandi",
@@ -18,16 +23,14 @@ export const siteName = "Akandi Online",
     home: 120
   },
   nav = "nav",
-  companyLink = "companyLink",
-  developerLink = "developerLink",
-  supportLink = "supportLink",
-  resourceLink = "resourceLink",
-  contactLink = "contactLink",
+   otherServicesLink = "otherserviceLink",
+   ourServicesLink = "ourservicesLink",
+   aboutLink = "aboutLink",
+   policiesLink = "policiesLink",
   generalClassName = "md:min-h-[calc(100vh-6rem)]",
-  legalLink = "legalLink",
-  legalFooterLink = "legalFooterLink",
+
   Routes: {
-    [name: string]: RouteType;
+    [name: string ]: RouteType;
   } = {
     Home: {
       path: "/",
@@ -53,235 +56,445 @@ export const siteName = "Akandi Online",
       Icon: undefined,
       type: "link"
     },
-    AirtimeData: {
+     BuyCar: {
       path: "",
-      label: "Airtime & Data",
-      showIn: [companyLink],
+      label: "Buy car",
+      showIn: [otherServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
     VTUServices: {
       path: "",
-      label: "VTU Services",
-      showIn: [companyLink],
+      label: "Sell car",
+      showIn: [otherServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    GasResale: {
+    HowTest: {
       path: "",
-      label: "Gas Resale",
-      showIn: [companyLink],
+      label: "How we test ",
+      showIn: [otherServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    MoneyTransfer: {
+    FAQ: {
       path: "",
       label: "Money Transfer",
-      showIn: [companyLink],
+      showIn: [otherServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    BillPayment: {
+    Export: {
       path: "",
-      label: "Bill Payment",
-      showIn: [companyLink],
+      label: "Export",
+      showIn: [ourServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    ApiDocumentation: {
+    CarLoan: {
       path: "",
-      label: "Api Documentation",
-      showIn: [developerLink],
+      label: "Car loans and car warranty",
+      showIn: [ourServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    More360Status: {
+    Transport: {
       path: "",
-      label: "More 360 Status",
-      showIn: [developerLink],
+      label: "Transport the car ",
+      showIn: [ourServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    Feedback: {
-      path: "/contact",
-      label: "Give us feedback",
-      showIn: [supportLink],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    HelpCenter: {
+    PickUp: {
       path: "",
-      label: "Help Center",
-      showIn: [supportLink],
+      label: "We pick up the car you're selling",
+      showIn: [ourServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
     LiveChat: {
       path: "",
-      label: "Live chat",
-      showIn: [supportLink],
+      label: "Leasing at Akandi online",
+      showIn: [ourServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    Career: {
+    ContactUs: {
       path: "",
-      label: "Career",
-      showIn: [resourceLink],
+      label: "Contact us",
+      showIn: [aboutLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    Blog: {
+    whereToFind: {
       path: "",
-      label: "Blog",
-      showIn: [resourceLink],
+      label: "where to find Akandi online cars",
+      showIn: [aboutLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    FAQ: {
-      path: "/faq",
-      label: "FAQ",
-      showIn: [resourceLink],
+    NewsRoom: {
+      path: "",
+      label: "Our newsroom",
+      showIn: [aboutLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    HelloContact: {
-      path: "mailto:hello@mymoreapp.com",
-      label: "hello@mymoreapp.com",
-      showIn: [contactLink],
+    TermsAndCondition: {
+      path: "",
+      label: "Our terms and condition",
+      showIn: [policiesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    SupportContact: {
-      path: "mailto:support@mymoreapp.com",
-      label: "support@mymoreapp.com",
-      showIn: [contactLink],
+    Policy: {
+      path: "",
+      label: "policy",
+      showIn: [policiesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    Reseller: {
-      path: "/solutions/reseller",
-      label: "Reseller",
-      showIn: [],
+    AboutUs: {
+      path: "",
+      label: "About us",
+      showIn: [policiesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    GasVendor: {
-      path: "/solutions/vendors",
-      label: "Gas Vendor",
-      showIn: [],
+    Newsletter: {
+      path: "",
+      label: "Newsletter",
+      showIn: [policiesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    PrivacyPolicy: {
-      path: "/privacy-policy",
-      label: "Privacy Policy",
-      showIn: [legalLink, legalFooterLink],
+    
+    work: {
+      path: "",
+      label: "Work with us",
+      showIn: [policiesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    TermsOfUse: {
-      path: "/terms",
-      label: "Terms of use",
-      showIn: [legalLink, legalFooterLink],
+    cookie: {
+      path: "",
+      label: "cookies settings",
+      showIn: [policiesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    CookiePolicy: {
-      path: "/cookie-policy",
-      label: "Cookie Policy",
-      showIn: [legalLink, legalFooterLink],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    RiskManagement: {
-      path: "/risk-management",
-      label: "Risk Management",
-      showIn: [legalLink],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    Login: {
-      path: "/auth/login",
-      label: "Login",
-      showIn: [],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    OTPVerification: {
-      path: "/auth/otp-verification",
-      label: "OTP Verification",
-      showIn: [],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    Requirements: {
-      path: "/auth/requirements",
-      label: "Requirements",
-      showIn: [],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    ApplicationForm: {
-      path: "/auth/application",
-      label: "Requirements",
-      showIn: [],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    },
-    Completed: {
-      path: "/auth/application/completed",
-      label: "Completed application",
-      showIn: [],
-      activeIn: [],
-      Icon: undefined,
-      type: "link"
-    }
+ 
   },
-  whyChooseUs = [
+  WorthKnowing=[
+  {
+     img:HeavyTruck,
+     title:"Heavy Vehicles at Akandi online",
+     desc:"heavy machinery & vehicles",
+     link:"kvdPro"
+
+  },
+  { 
+    img:NeedCar,
+    title:"Find the car for your needs",
+    desc:"try our car guide today",
+    link: "carguide"
+
+  },
+  {
+    img:Export,
+    title:"Good-To-Know:Export",
+    desc:"how to export through us",
+    link:"export"
+  },
+  {
+   img:CarWorth,
+   title:"What is your car worth",
+   desc:"get a valuation here",
+   link:"sell"
+  },
+  ],
+  option=[
     {
-      title: "Choose what you would like to do with More",
-      Icon: ReceiptSearch,
-      description:
-        "More allows you to create resellers account & also provides an opportunity to sell cooking gas. We have amazing features that will keep unfolding as you journey with us."
+      text:"Akandi certified",
+      link:"certified"
     },
     {
-      title: "Create an account & get verified in seconds.",
-      Icon: Profile2User,
-      description:
-        "Tell us more about your business. Provide your company name, address, and contact information. This helps us tailor our services to better meet your needs."
+     text:"Car loan through Akandi",
+     link:"carloan"
     },
     {
-      title: "Set up your merchant dashboard and explore!",
-      Icon: CardTick1,
-      description:
-        "Join the ranks of successful merchants who have chosen More as their trusted partner. Sign up today and experience the difference."
+        text:"We pick up the car you're selling",
+        link:"we-pick-up"
     }
   ],
+  sections=[
+    {
+     icon:HatchBack,
+      name:"car"
+
+    },
+    {
+     icon: VanIcon,
+    name:"Light truck"
+  },
+  {
+     icon:TruckIcon,
+      name:"Heavy truck"
+    },
+    {
+      icon:TractorIcon,
+      name:"Machines"
+    },
+    {
+     icon:CamperIcon,
+     name:"Recreational vehicle"
+    }
+  ],
+
+  lanblog=[
+     {
+      img:test,
+      title:"How do we test this cars",
+      desc:"All cars have been tested by professional technicians.we access the machine and take the car  for a text drive ",
+      button:"Read more about the test"
+     },
+     {
+      img:Electric,
+      title:"See all electric cars on auction",
+      desc:"Looking for  an electric car,plug in hybrid? Look further!We have wide range of electriv driven cars",
+      button:"See all cars"
+     }
+
+   ],
+   Lancontent=[
+    {
+      title:"Car auctions-buy  your next car at Akandi.com",
+      info:"Akandi.com is Nigeria's biggest marketplace for used cars,Every year we sell more  than  26000 cars, in hunderds of model and from more than 60 car brands.with us, you can find the car that suit your Needs!",
+      link:"/auction",
+
+    },
+    {
+      title:"Sell a company car through Akande Online",
+      info:"Do you have a company car you want to sell?We offer our services to private individuals as well as companies.Contact us to know more!",
+      link:"/auction",
+    }
+
+  ],
+  heavyMachinery=[
+    {
+      img:Excalator,
+      day:"monday",
+      map:"lagos",
+      name:"Wacker Neuson EZ28",
+      type:"minigravare",
+      year:"2013/300h/",
+      export:"yes",
+      bid:"102500SEK",
+    },
+    {
+      img:Excalator,
+      day:"monday",
+      map:"lagos",
+      name:"volvo BM LM622",
+      type:"minigravare",
+      export:"yes",
+      bid:"102500SEK",
+      vatBid:"40 400SEK"
+
+    },
+    {
+      img:Excalator,
+      day:"monday",
+      map:"lagos",
+      name:"volvo BM LM622",
+      type:"minigravare",
+      export:"yes",
+      bid:"102500SEK",
+      vatBid:"40 400SEK"
+
+    },
+    {
+      img:Excalator,
+      day:"monday",
+      map:"lagos",
+      name:"volvo BM LM622",
+      type:"minigravare",
+      export:"yes",
+      bid:"102500SEK",
+      vatBid:"40 400SEK"
+
+    },
+    {
+      img:Excalator,
+      day:"monday",
+      map:"lagos",
+      name:"volvo BM LM622",
+      type:"minigravare",
+      export:"yes",
+      bid:"102500SEK",
+      vatBid:"40 400SEK"
+
+    },
+
+  ],
+  Truck=[
+  {
+    img:van,
+    day:"monday",
+    map:"abuja ",
+    name:"mercedes 903",
+    type:"minigravare",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"55 500 SEK",
+  
+  },
+  {
+    img:van,
+    day:"tuesday",
+    map:"lagos",
+    name:"volks wagon  crafter",
+    type:"Buss(19 sits + chaffeur +3 rullstols....",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"89 300 SEK",
+    vatBid:"71 440 SEK"
+  },
+  {
+    img:van,
+    day:"tuesday",
+    map:"lagos",
+    name:"volks wagon  crafter",
+    type:"Buss(19 sits + chaffeur +3 rullstols....",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"89 300 SEK",
+    vatBid:"71 440 SEK"
+  }, 
+  {
+    img:van,
+    day:"tuesday",
+    map:"lagos",
+    name:"volks wagon  crafter",
+    type:"Buss(19 sits + chaffeur +3 rullstols....",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"89 300 SEK",
+    vatBid:"71 440 SEK"
+  },
+  {
+    img:van,
+    day:"tuesday",
+    map:"lagos",
+    name:"volks wagon  crafter",
+    type:"Buss(19 sits + chaffeur +3 rullstols....",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"89 300 SEK",
+    vatBid:"71 440 SEK"
+   },
+  {
+    img:van,
+    day:"tuesday",
+    map:"lagos",
+    name:"volks wagon  crafter",
+    type:"Buss(19 sits + chaffeur +3 rullstols....",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"89 300 SEK",
+    vatBid:"71 440 SEK"
+  },
+  {
+    img:van,
+    day:"tuesday",
+    map:"lagos",
+    name:"volks wagon  crafter",
+    type:"Buss(19 sits + chaffeur +3 rullstols....",
+    year:"2013/210 063km/",
+    export:"yes",
+    bid:"89 300 SEK",
+    vatBid:"71 440 SEK"
+  },
+  ],
+  advantage=[
+  {
+    title:"Buy and sell a wide range  of vehicles at one place",
+    desc:"Have you managed different type of vehicles at different places?Stop searching,now you can stay on one website whether you're buying or selling."
+  },
+  {
+    title:"A bigger selection",
+    desc:"One would rather choose a candy store that offers 100 varieties,instead of just 10.Now you can browse through passenger cars,light truck,,heavy machinery,trucks,and recreational vehicles-or just choose the category that suits you best,of course"   
+  },
+  {
+    title:"more potential nuyers when selling",
+    desc:"Yep,with the merger,we now have more potential buyers at Akandi online,which is positive for you when you're selling  "
+  },
+  {
+    title:"Access to broad vehicle expertise ",
+    desc:"Now we gather all oue vehicle expert under one roof!This makes us pros in everything from passenger cars and mini excavators to substancial load carriers and fire excavators.what would you like to ask us? "
+  }
+  ],
+  accountBenefit=[
+    {
+      title:"All in one place.",
+      desc:`Everything connected to when you are searching,buying and selling a vehicle,we did collect it for you at "my pages".from here you can follow along during your whole buying or selling process.`
+    },
+     { 
+       title:"Your favourite and saved searches",
+        desc:"You can easily mark your favourite vehicles by clicking on the heart icon when you find one you like.not having  the luck  to find your favourite right avay?No worries,create a saved search from your filters and we will get back to you when we find something that suits you "
+     }
+    
+  ],
+  salesMaking=[
+  {
+    img:saleMaking1,
+    title:" 1 contact us ",
+    desc1:"send a notice of interest",
+    desc2:"We work out the details together",
+    desc3:"Hand in the car or let us pick it up "
+  },
+ {
+    img:saleMaking2,
+    title:" 2 we make it ready for sale",
+    desc1:"our technician test",
+    desc2:"the car get valued",
+    desc3:"we wash and photograph"
+  },
+ {
+    img:saleMaking3,
+    title:" 3 We show it and sell ",
+    desc1:"we market the car on several site",
+    desc2:"the car is sold through bidding or at a fixed price",
+    desc3:"you consider the highest bid"
+  },
+ {
+    img:saleMaking4,
+    title:"4 we take care of everything",
+    desc1:"we do all the paperwork",
+    desc2:"We deliver the car to the buyer",
+    desc3:"We take responsibility for any complains"
+  },
+
+  ],
+
   teams = [
     {
       name: "Dominic Praise",
@@ -328,17 +541,12 @@ export const siteName = "Akandi Online",
   },
   allRoutes: RouteType[] = convertObjectToArray(Routes),
   allSocials: SocialMediaList = convertObjectToArray(Socials),
-  companyRoutes = allRoutes.filter((link) => link.showIn.includes(companyLink)),
-  developerRoutes = allRoutes.filter((link) =>
-    link.showIn.includes(developerLink)
+   otherServiceRoutes = allRoutes.filter((link) => link.showIn.includes(otherServicesLink)),
+   ourServiceRoutes = allRoutes.filter((link) =>
+    link.showIn.includes(ourServicesLink)
   ),
-  supportRoutes = allRoutes.filter((link) => link.showIn.includes(supportLink)),
-  resourceRoutes = allRoutes.filter((link) =>
-    link.showIn.includes(resourceLink)
+   aboutRoutes = allRoutes.filter((link) => link.showIn.includes(aboutLink)),
+    policiesRoutes = allRoutes.filter((link) =>
+    link.showIn.includes(policiesLink)
   ),
-  contactRoutes = allRoutes.filter((link) => link.showIn.includes(contactLink)),
-  legalFooterRoutes = allRoutes.filter((link) =>
-    link.showIn.includes(legalFooterLink)
-  ),
-  legalRoutes = allRoutes.filter((link) => link.showIn.includes(legalLink)),
   navRoutes = allRoutes.filter((link) => link.showIn.includes(nav));

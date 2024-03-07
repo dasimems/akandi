@@ -2,6 +2,10 @@ import { StaticImageData } from "next/image";
 import { LinkProps } from "next/link";
 import { HTMLProps } from "react";
 import { IconBaseProps } from "react-icons";
+import CheckBox from '../components/general/form/CheckBox';
+import Label from '../components/general/form/Label';
+import { option } from '@/utils/_variables';
+import Accordion from '../components/general/accordion';
 
 export type LinkType = "primary" | "secondary" | "default";
 export type ButtonType =
@@ -64,6 +68,14 @@ export type ButtonProps = {
   link?: string;
 } & HTMLProps<HTMLButtonElement>;
 
+export type SelectProps={
+  value:string,
+  onChange:(newValue:string)=>void,
+  placeholder:string,
+  options:string[]
+};
+
+
 export type RouteType = {
   path: string;
   Icon: undefined | IconType;
@@ -94,6 +106,7 @@ export type SectionHeaderProps = {
   activeText?: "text-one" | "text-two";
   className?: string;
 };
+
 export type LogoProps = {
   removeText?: boolean;
   removeImage?: boolean;
@@ -169,3 +182,5 @@ export type SelectBoxType = {
   hideEmptyOption?: boolean
 
 } & InputElementProps
+
+

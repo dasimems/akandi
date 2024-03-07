@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   let typeClassName = "bg-slate-200";
   switch (type) {
     case "primary":
-      typeClassName = "bg-primary text-white";
+      typeClassName = "bg-primary text-white  ring-5 ring-primary-900 shadow-md";
       break;
     case "secondary":
       typeClassName = "bg-secondary text-white";
