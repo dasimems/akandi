@@ -17,7 +17,7 @@ const Hero = () => {
                          <Image src={heroImg}  width={1920} alt="" className="h-[600px]" />
                     </div>
                     <div className="flex flex-col gap-6  text-white text-center">
-                        <div className="text-center flex  flex-col absolute  top-[40%] left-[38%] items-center">
+                        <div className="text-center flex  flex-col absolute  top-[40%] left-[33%] items-center">
                             <h1 className="text-[4rem] font-bold">Large selection</h1>
                             <p  className="text-[1.7rem] font-bold ">Car, Truck, Heavy machinery or carvan? </p>
                             <div className="mt-8">

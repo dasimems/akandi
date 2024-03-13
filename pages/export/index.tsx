@@ -7,10 +7,12 @@ const Exporting = () => {
   return (
      <>
      <section className='flex justify-center'>
-          <Image src={exportHero} alt='' width={1920}/>
+       <div>  
+       <Image src={exportHero} alt='' width={1920}/>
            <div>
              <h3>Export through Akandi 0nline</h3>
            </div>
+       </div>
      </section>
      <section className='flex justify-center'>
          <div>

@@ -26,8 +26,18 @@ import sellHero from "./sell hero.jpeg"
 import saleMaking1 from "./salemaking1.jpeg"
 import  saleMaking2  from "./salemaking2.jpeg"
 import saleMaking3 from "./salemaking3.jpeg"
-import  saleMaking4 from "./salemaking4.jpeg";
+import  saleMaking4 from "./salemaking4.jpeg"
 import carGuide from "./carguide.jpeg"
+import carLoanHero from "./carloan-hero.avif"
+import leaseHero from "./leasing-hero.png"
+import carInsuranceHero from "./car-insurance-hero.png"
+import pickUPHero from "./pickup-hero.jpg"
+import transportHero from "./transport hero.avif"
+import aboutHero from "./about hero.jpg"
+import buyUsedHero from "./we-buy-used-cars-hero.avif"
+import sellUsedHero from "./we-sell-used-car-hero.avif"
+import testHero  from "./how-it-works.jpg"
+
 
 
 
@@ -62,5 +72,14 @@ export {
  saleMaking2,
  saleMaking3,
  saleMaking4,
- carGuide
+ carGuide,
+ carLoanHero,
+ carInsuranceHero,
+ leaseHero,
+ transportHero,
+ pickUPHero,
+ aboutHero,
+ buyUsedHero,
+ sellUsedHero,
+ testHero
 };

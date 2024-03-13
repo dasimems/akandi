@@ -57,15 +57,15 @@ export const siteName = "Akandi Online",
       type: "link"
     },
      BuyCar: {
-      path: "",
+      path: "/buy-used-cars",
       label: "Buy car",
       showIn: [otherServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
-    VTUServices: {
-      path: "",
+    SellCar: {
+      path: "/sell-used-cars",
       label: "Sell car",
       showIn: [otherServicesLink],
       activeIn: [],
@@ -82,14 +82,14 @@ export const siteName = "Akandi Online",
     },
     FAQ: {
       path: "",
-      label: "Money Transfer",
+      label: "FAQ",
       showIn: [otherServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
     Export: {
-      path: "",
+      path: "/export",
       label: "Export",
       showIn: [ourServicesLink],
       activeIn: [],
@@ -97,15 +97,23 @@ export const siteName = "Akandi Online",
       type: "link"
     },
     CarLoan: {
-      path: "",
+      path: "/carloan",
       label: "Car loans and car warranty",
       showIn: [ourServicesLink],
       activeIn: [],
       Icon: undefined,
       type: "link"
     },
+     CarInsurance: {
+      path: "/car-insurance",
+      label: "Car insurance",
+      showIn: [ourServicesLink],
+      activeIn: [],
+      Icon: undefined,
+      type: "link"
+    },
     Transport: {
-      path: "",
+      path: "/transport",
       label: "Transport the car ",
       showIn: [ourServicesLink],
       activeIn: [],
@@ -113,7 +121,7 @@ export const siteName = "Akandi Online",
       type: "link"
     },
     PickUp: {
-      path: "",
+      path: "/we-pick-up",
       label: "We pick up the car you're selling",
       showIn: [ourServicesLink],
       activeIn: [],
@@ -121,7 +129,7 @@ export const siteName = "Akandi Online",
       type: "link"
     },
     LiveChat: {
-      path: "",
+      path: "/leasing",
       label: "Leasing at Akandi online",
       showIn: [ourServicesLink],
       activeIn: [],
@@ -153,7 +161,7 @@ export const siteName = "Akandi Online",
       type: "link"
     },
     TermsAndCondition: {
-      path: "",
+      path: "/terms-and-conditions",
       label: "Our terms and condition",
       showIn: [policiesLink],
       activeIn: [],
@@ -169,7 +177,7 @@ export const siteName = "Akandi Online",
       type: "link"
     },
     AboutUs: {
-      path: "",
+      path: "/about-akandi online",
       label: "About us",
       showIn: [policiesLink],
       activeIn: [],
@@ -462,6 +470,79 @@ export const siteName = "Akandi Online",
         desc:"You can easily mark your favourite vehicles by clicking on the heart icon when you find one you like.not having  the luck  to find your favourite right avay?No worries,create a saved search from your filters and we will get back to you when we find something that suits you "
      }
     
+  ],
+  consumersTerms =[
+   {
+    article:`Has something gone wrong when you placed a bid,we will help you adjust this before
+             the countdown begins.You need to contact us,at the latest,6 hours before the countdown begins in order
+             for us to be able to adjust your bid `
+   },
+   {
+    article:`When the auction is closed,you as the winning bidder need to book a time and collecting
+             the car within three working days. `
+   },
+   {
+    article:`When you nuy a car through Akandi online, you pay a mediation fee in addition to the agreed
+            price of the car.The mediation fee is for each car is indicated in the car's presentation/advertisement on Akandi online `
+   },
+   {
+    article:`A customer can pay for their car purchase with bank transfer or Swish.Akandi online does not accept
+            the following means of payment:debit card,credit card,bank card,cash payment,bank draft 
+            cheque,company card or foreign bank card read more about payment `
+   },
+   {
+    article:`in the event of dishonest bidding,the account holder is blocked from placing bids and buying cars on Akandi online.`
+   }
+
+  ],
+  companiesTerms=[
+    {
+      article:`Cars and light trucks undergo our independent and comprehensive Akandi online test,while
+              heavy vehicles,machinery and recreational vehicles undergo simpler visuaal documentation. `
+    },
+    {
+      article:`Vehicles and machines that are sold at the seller's location may be used until the sale is
+               completed and collected by the buyer.`
+    },
+    {
+      article:`When you buy a vehicle or machine through Akandi online,you pay,in addition to the agreed price
+               for the vehicle,a mediaation fee`
+    },
+    {
+      article:`Payment of the agreed price and mediation fee must be recieved br Akandi online withinn 24 hours after
+               the end of bidding or agreement on sale at a fixed price `
+    },
+    {
+      article:`if the payment is not completed,youo will be charged the mediation fee and any overhead costs`
+    },
+    {
+      article:`As a company,you need to make an appointment to collect the vehicle no later than 24 hours after
+                the end of the auction or agreement to buy for a fixed price.if collection takes place without a 
+                pre-booked time Akandi online will charge you an administration  fee`
+    },
+    {
+      article:`Akandi online represents the seller and handles all commmunication with the buyer.the buyer does not
+                have the right to contact the seller directly`
+    },
+    {
+      article:`Some vehicles may be limited to being sold only to selected countries or VAT-registered companies`
+    },
+    {
+      article:`if the vehicle or machine is not collected within three(3) working days (cars and light trucks) or 
+               five(5) working days (heavy vehicles,machinery,and recreationa vehicles for export customers) from 
+               the day of purchase,a storage fee per vehicle or machine and day will be charged,unless other
+               agreement between Akandi online and the customer.  `
+    },
+    {
+      article:`it is always the buyer who check the vehicle or machines corresponds to what he or she has the right to expect with,
+               regards to the vehicle description.This applies regardlesss of vehicle or machine type.Always refer to pictures or any 
+               video for condition assesment.There may be other remarks in condition and function
+               description than what is written at Akandi online.`
+    },
+    {
+      article:`As a buyer,you  are responsible for complying with all applicable international economic
+              sanctions laws, regulations,trade embargoes or similar restriction.`
+    }
   ],
   salesMaking=[
   {
