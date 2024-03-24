@@ -2,18 +2,15 @@ import { StaticImageData } from "next/image";
 import { LinkProps } from "next/link";
 import { HTMLProps } from "react";
 import { IconBaseProps } from "react-icons";
-import CheckBox from '../components/general/form/CheckBox';
-import Label from '../components/general/form/Label';
-import { option } from '@/utils/_variables';
-import Accordion from '../components/general/accordion';
 
 export type LinkType = "primary" | "secondary" | "default";
 export type ButtonType =
   | "primary"
   | "secondary"
   | "default"
-  | "transparent" | "white" |
-  "black";
+  | "transparent"
+  | "white"
+  | "black";
 
 export type IconProps = {
   size?: number;
@@ -64,22 +61,21 @@ export type ButtonProps = {
   className?: string;
   children: React.ReactNode;
   action?: () => void;
-  rounded?:boolean;
+  rounded?: boolean;
   link?: string;
 } & HTMLProps<HTMLButtonElement>;
 
-export type SelectProps={
-  value:string,
-  onChange:(newValue:string)=>void,
-  placeholder:string,
-  options:string[]
+export type SelectProps = {
+  value: string;
+  onChange: (newValue: string) => void;
+  placeholder: string;
+  options: string[];
 };
-
 
 export type RouteType = {
   path: string;
   Icon: undefined | IconType;
-  showIn:string[];
+  showIn: string[];
   label: string;
   type: "link" | "hash";
   activeIn: string[];
@@ -112,8 +108,8 @@ export type LogoProps = {
   removeImage?: boolean;
   className?: string;
   textClassName?: string;
-  height?: number,
-  width?: number,
+  height?: number;
+  width?: number;
 };
 
 export type ProjectProps = {
@@ -174,13 +170,10 @@ export type InputFieldProps = {
 export type SelectOptionType = {
   value: string;
   label: string;
-}
+};
 
 export type SelectBoxType = {
   options?: SelectOptionType[];
   emptyOptionLabel?: string;
-  hideEmptyOption?: boolean
-
-} & InputElementProps
-
-
+  hideEmptyOption?: boolean;
+} & InputElementProps;
