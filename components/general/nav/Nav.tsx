@@ -40,19 +40,19 @@ const Nav = () => {
   }, [changeHeader]);
   return (
     <>
-      <div className="flex justify-center py-3 bg-black text-center text-white text-xs px-10">
+      {/* <div className="flex justify-center py-3 bg-black text-center text-white text-xs px-10">
         <h1>
           🎉 More 360 has rebranded to serve you better.{" "}
           <Link href="" className="underline">
             Learn More
           </Link>
         </h1>
-      </div>
+      </div> */}
       <SectionContainer
         className={`${
           hasShadow ? "shadow-lg" : ""
         } border-b h-[5rem]  items-center bg-primary ${
-          isFixed ? "fixed top-0" : "absolute top-[2.5rem]"
+          isFixed ? "fixed top-0" : "absolute top-0"
         } flex justify-between duration-300 w-full z-[9999]`}
       >
         <Logo removeText />
@@ -62,12 +62,8 @@ const Nav = () => {
           linkClassName="font-medium"
         /> */}
         <div className=" min-[1000px]:flex hidden items-center gap-6 text-sm">
-          <Button>
-            Login
-          </Button>
-          <Button>
-            Open Account
-          </Button>
+          <Button>Login</Button>
+          <Button>Open Account</Button>
         </div>
 
         <button
