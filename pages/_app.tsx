@@ -7,7 +7,6 @@ import SEO from "@/components/general/SEO";
 import Nav from "@/components/general/nav/Nav";
 import Footer from "@/components/general/footer/Footer";
 
-
 export type AppEngineProps = AppProps & {
   Component: {
     title?: string;
@@ -36,9 +35,9 @@ export default function App({ Component, pageProps }: AppEngineProps) {
         locale={Component?.locale}
       />
       <Nav />
-      <div className="z-10">
+      <div className="z-10 min-h-screen">
         <Component {...pageProps} />
-      </div>   
+      </div>
       <Footer />
     </>
   );

@@ -10,6 +10,7 @@ import Button from "../Button";
 import Link from "next/link";
 import { Menu, User } from "iconsax-react";
 import { useRouter } from "next/router";
+import { MenuIcon } from "lucide-react";
 
 const Nav = () => {
   const [hasShadow, setHasShadow] = useState<boolean>(false);
@@ -62,8 +63,15 @@ const Nav = () => {
           linkClassName="font-medium"
         /> */}
         <div className=" min-[1000px]:flex hidden items-center gap-6 text-sm">
-          <Button>Login</Button>
-          <Button>Open Account</Button>
+          <Button
+            type="transparent"
+            className="border border-slate-600 inline-flex items-center gap-3 !py- font-medium"
+          >
+            <span className="text-xl font-bold">
+              <MenuIcon />
+            </span>
+            <span>Menu</span>
+          </Button>
         </div>
 
         <button
