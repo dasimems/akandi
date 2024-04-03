@@ -1,6 +1,6 @@
 import React from "react";
 import App from "./_app";
-import Hero from "@/components/general/homepage/Hero";
+import Hero from "@/components/general/homepage/HeroContent";
 import Selections from "@/components/general/homepage/Selections";
 import WorthKnowing from "@/components/general/homepage/WorthKnowing";
 import WhyUs from "@/components/general/homepage/WhyUs";
