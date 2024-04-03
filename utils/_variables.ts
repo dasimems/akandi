@@ -14,7 +14,7 @@ import {
   NeedCar,
   CarWorth,
   Electric,
-  test,
+  Test,
   HatchBack,
   VanIcon,
   TruckIcon,
@@ -223,32 +223,269 @@ export const siteName = "Akandi Online",
       type: "link"
     }
   },
-  WorthKnowing = [
-    {
+  WorthKnowing = {
+    HeavyVehicles: {
       img: HeavyTruck,
-      title: "Heavy Vehicles at Akandi online",
+      title: "Heavy Vehicles at Akandi",
       desc: "heavy machinery & vehicles",
       link: "kvdPro"
     },
-    {
+    FindCars: {
       img: NeedCar,
       title: "Find the car for your needs",
       desc: "try our car guide today",
       link: "carguide"
     },
-    {
+    ExportCars: {
       img: Export,
       title: "Good-To-Know:Export",
       desc: "how to export through us",
       link: "export"
     },
-    {
+    VehicleWorth: {
       img: CarWorth,
       title: "What is your car worth",
       desc: "get a valuation here",
       link: "sell"
     }
-  ],
+  },
+  Selections = {
+    Cars: {
+      label: "Car",
+      value: "used-cars",
+      image: HatchBack
+    },
+    LightTruck: {
+      label: "LightTruck",
+      value: "light-truck",
+      image: VanIcon
+    },
+    HeavyTruck: {
+      label: "HeavyTruck",
+      value: "heavy-truck",
+      image: TruckIcon
+    },
+    Machines: {
+      label: "Machines",
+      value: "machines",
+      image: TractorIcon
+    },
+    RecreationalVehicles: {
+      label: "Recreational Vehicles",
+      value: "recreational-vehicles",
+      image: CamperIcon
+    }
+  },
+  AboutContent = {
+    Test: {
+      image: Test,
+      description:
+        "All cars have been tested by professional technicians. We assess the machinery and take the car for a test drive.",
+      link: "cars",
+      title: "How we test the cars",
+      linkText: "Read more about the test"
+    },
+    AuctionedCars: {
+      image: Electric,
+      description:
+        "Looking for an electric car, plug-in hybrid or an electric hybrid? Look no further! We have wide range of electric driven cars.",
+      link: "cars",
+      title: "See all electric cars on auction",
+      linkText: "See all cars"
+    }
+  },
+  CarBrands = {
+    AlfaRomeo: {
+      name: "Alfa Romeo",
+      value: "alfa-romeo"
+    },
+    AstonMartin: {
+      value: "Aston Martin",
+      label: "aston-martin"
+    },
+    Audi: {
+      value: "Audi",
+      label: "audi"
+    },
+    Bentley: {
+      value: "Bentley",
+      label: "bentley"
+    },
+    BMW: {
+      value: "BMW",
+      label: "bmw"
+    },
+    Cadillac: {
+      value: "Cadillac",
+      label: "cadillac"
+    },
+    Chevrolet: {
+      value: "Chevrolet",
+      label: "chevrolet"
+    },
+    Chrysler: {
+      value: "Chrysler",
+      label: "chrysler"
+    },
+    Citroen: {
+      value: "Citroen",
+      label: "citroen"
+    },
+    Dacia: {
+      value: "Dacia",
+      label: "dacia"
+    },
+    Dodge: {
+      value: "Dodge",
+      label: "dodge"
+    },
+    Ferrari: {
+      value: "",
+      label: ""
+    },
+    Fiat: {
+      value: "",
+      label: ""
+    },
+    Ford: {
+      value: "",
+      label: ""
+    },
+    Honda: {
+      value: "",
+      label: ""
+    },
+    Hyundai: {
+      value: "",
+      label: ""
+    },
+    Iveco: {
+      value: "",
+      label: ""
+    },
+    Jaguar: {
+      value: "",
+      label: ""
+    },
+    Jeep: {
+      value: "",
+      label: ""
+    },
+    KIA: {
+      value: "",
+      label: ""
+    },
+    LandRover: {
+      value: "",
+      label: ""
+    },
+    Lexus: {
+      value: "",
+      label: ""
+    },
+    LynkCo: {
+      value: "",
+      label: ""
+    },
+    Maserati: {
+      value: "",
+      label: ""
+    },
+    Mazda: {
+      value: "",
+      label: ""
+    },
+    Mercedes: {
+      value: "",
+      label: ""
+    },
+    MINI: {
+      value: "",
+      label: ""
+    },
+    Mitsubishi: {
+      value: "",
+      label: ""
+    },
+    Nissan: {
+      value: "",
+      label: ""
+    },
+    Opel: {
+      value: "",
+      label: ""
+    },
+    Peugeot: {
+      value: "",
+      label: ""
+    },
+    Polestar: {
+      value: "",
+      label: ""
+    },
+    Porsche: {
+      value: "",
+      label: ""
+    },
+    Renault: {
+      value: "",
+      label: ""
+    },
+    RollsRoyce: {
+      value: "",
+      label: ""
+    },
+    Saab: {
+      value: "",
+      label: ""
+    },
+    SEAT: {
+      value: "",
+      label: ""
+    },
+    Skoda: {
+      value: "",
+      label: ""
+    },
+    Subaru: {
+      value: "",
+      label: ""
+    },
+    Suzuki: {
+      value: "",
+      label: ""
+    },
+    Tesla: {
+      value: "",
+      label: ""
+    },
+    Toyota: {
+      value: "",
+      label: ""
+    },
+    Volkswagen: {
+      value: "",
+      label: ""
+    },
+    Volvo: {
+      value: "",
+      label: ""
+    }
+  },
+  WhyUsLinks = {
+    Certified: {
+      label: "Akandi Certified",
+      value: "certified"
+    },
+    CarLoan: {
+      label: "Car loan through Akandi",
+      value: "car-loan"
+    },
+    PickUp: {
+      label: "We pick up the car you are selling",
+      value: "pick-up"
+    }
+  },
   Socials: { [name: string]: SocialMedia } = {
     Twitter: {
       Icon: FaTwitter,
@@ -283,4 +520,8 @@ export const siteName = "Akandi Online",
   policiesRoutes = allRoutes.filter((link) =>
     link.showIn.includes(policiesLink)
   ),
+  allAboutContent = convertObjectToArray(AboutContent),
+  allWhyUsLink = convertObjectToArray(WhyUsLinks),
+  allWorthKnowing = convertObjectToArray(WorthKnowing),
+  allSelections = convertObjectToArray(Selections),
   navRoutes = allRoutes.filter((link) => link.showIn.includes(nav));

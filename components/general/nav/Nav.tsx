@@ -10,7 +10,9 @@ import Button from "../Button";
 import Link from "next/link";
 import { Menu, User } from "iconsax-react";
 import { useRouter } from "next/router";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, SearchIcon } from "lucide-react";
+import InputField from "../form/InputField";
+import SelectBox from "../form/SelectBox";
 
 const Nav = () => {
   const [hasShadow, setHasShadow] = useState<boolean>(false);
@@ -52,16 +54,34 @@ const Nav = () => {
       <SectionContainer
         className={`${
           hasShadow ? "shadow-lg" : ""
-        } border-b h-[5rem]  items-center bg-primary ${
+        } border-b h-[5rem] md:gap-20  items-center bg-primary ${
           isFixed ? "fixed top-0" : "absolute top-0"
         } flex justify-between duration-300 w-full z-[9999]`}
       >
         <Logo removeText />
-        {/* <NavLinks
-          showActive
-          className="gap-14 hidden min-[1000px]:flex"
-          linkClassName="font-medium"
-        /> */}
+        <div className="flex items-stretch rounded-full w-full overflow-hidden">
+          <div className="bg-slate-200">
+            <SelectBox
+              className="w-[150px]"
+              placeholder="All vehicles"
+              inputClassName="border-0 rounded-none h-[3rem] bg-slate-200"
+              options={[
+                {
+                  value: "",
+                  label: ""
+                }
+              ]}
+            />
+          </div>
+          <InputField
+            placeholder="Search for brand, model, equipments etc."
+            className="flex-1 !w-auto"
+            inputClassName="rounded-none border-0 h-[3rem]"
+          />
+          <Button type="black" className="rounded-none">
+            <SearchIcon />
+          </Button>
+        </div>
         <div className=" min-[1000px]:flex hidden items-center gap-6 text-sm">
           <Button
             type="transparent"

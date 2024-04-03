@@ -53,6 +53,7 @@ export type PageContainerProps = {
   children: React.ReactNode;
   className?: string;
   innerContent?: boolean;
+  parentClassName?: string;
 } & HTMLProps<HTMLDivElement>;
 
 export type ButtonProps = {

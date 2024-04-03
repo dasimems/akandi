@@ -2,12 +2,14 @@ import { PageContainerProps } from "@/utils/types";
 import { forwardRef, useEffect, ReactNode, PropsWithChildren } from "react";
 
 const SectionContainer = forwardRef<HTMLDivElement, PageContainerProps>(
-  ({ children, className, innerContent, ...prop }, ref) => {
+  ({ children, className, innerContent, parentClassName, ...prop }, ref) => {
     return (
-      <div className={`w-full flex items-center justify-center`}>
+      <div
+        className={`w-full flex items-center justify-center ${parentClassName}`}
+      >
         <div
           ref={ref}
-          className={`px-[10%] min-[1921px]:px-[120px] w-full ${
+          className={`px-[5%] min-[1921px]:px-[120px] w-full ${
             !innerContent ? "max-w-[1920px]" : ""
           } ${className ? className : ""}`}
           {...prop}

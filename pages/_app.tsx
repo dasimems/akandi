@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import SEO from "@/components/general/SEO";
 import Nav from "@/components/general/nav/Nav";
 import Footer from "@/components/general/footer/Footer";
+import NextNProgress from "nextjs-progressbar";
 
 export type AppEngineProps = AppProps & {
   Component: {
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppEngineProps) {
   }, []);
   return (
     <>
+      <NextNProgress color="#5DB8A6" height={3.5} />
       <SEO
         title={Component?.title}
         description={Component?.description}
@@ -35,7 +37,7 @@ export default function App({ Component, pageProps }: AppEngineProps) {
         locale={Component?.locale}
       />
       <Nav />
-      <div className="z-10 min-h-screen">
+      <div className="z-10 pt-[5rem] min-h-screen">
         <Component {...pageProps} />
       </div>
       <Footer />
