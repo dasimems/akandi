@@ -8,7 +8,7 @@ import { siteName } from "@/utils/_variables";
 
 const Hero = () => {
   return (
-    <div className="h-[32rem] bg-slate-200 relative">
+    <div className="sm:h-[32rem] bg-slate-200 relative">
       <Image
         src={HeroImg}
         alt={siteName}
@@ -18,7 +18,7 @@ const Hero = () => {
       />
       <SectionContainer
         parentClassName="h-full"
-        className=" flex flex-col relative items-center justify-center gap-2 h-full w-full bg-[rgba(0,0,0,.3)] text-white"
+        className=" flex flex-col py-20 relative items-center justify-center gap-2 text-center h-full w-full bg-[rgba(0,0,0,.3)] text-white"
       >
         <h1 className="font-extrabold text-2xl sm:text-4xl md:text-6xl">
           Large Selection

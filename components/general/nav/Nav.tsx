@@ -59,7 +59,7 @@ const Nav = () => {
         } flex justify-between duration-300 w-full z-[9999]`}
       >
         <Logo removeText />
-        <div className="flex items-stretch rounded-full w-full overflow-hidden">
+        <div className="md:flex hidden items-stretch rounded-full w-full overflow-hidden">
           <div className="bg-slate-200">
             <SelectBox
               className="w-[150px]"
@@ -82,7 +82,7 @@ const Nav = () => {
             <SearchIcon />
           </Button>
         </div>
-        <div className=" min-[1000px]:flex hidden items-center gap-6 text-sm">
+        <div className=" flex items-center gap-6 text-sm">
           <Button
             type="transparent"
             className="border border-slate-600 inline-flex items-center gap-3 !py- font-medium"
@@ -90,20 +90,9 @@ const Nav = () => {
             <span className="text-xl font-bold">
               <MenuIcon />
             </span>
-            <span>Menu</span>
+            <span className="hidden sm:inline-block">Menu</span>
           </Button>
         </div>
-
-        <button
-          onClick={() => {
-            push(Routes.Login.path);
-          }}
-          title="Nav button"
-          type="button"
-          className="min-[1000px]:hidden"
-        >
-          <User variant="Bold" />
-        </button>
       </SectionContainer>
     </>
   );
