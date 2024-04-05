@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppEngineProps) {
   }, []);
   return (
     <>
-      <NextNProgress color="#5DB8A6" height={3.5} />
+      <NextNProgress color="#cae8e2" height={3.5} />
       <SEO
         title={Component?.title}
         description={Component?.description}

@@ -21,13 +21,13 @@ import CamperIcon from "../svgs/CamperIcon.svg";
 import KvdHero from "./kvdhero.png";
 import Excalator from "./excalator.avif";
 import van from "./van.avif";
-import exportHero from "./export hero.jpeg";
-import sellHero from "./sell hero.jpeg";
+import ExportHeroImage from "./export hero.jpeg";
+import SellHeroImage from "./sell hero.jpeg";
 import saleMaking1 from "./salemaking1.jpeg";
 import saleMaking2 from "./salemaking2.jpeg";
 import saleMaking3 from "./salemaking3.jpeg";
 import saleMaking4 from "./salemaking4.jpeg";
-import carGuide from "./carguide.jpeg";
+import CarGuideImage from "./carguide.jpeg";
 import carLoanHero from "./carloan-hero.avif";
 import leaseHero from "./leasing-hero.png";
 import carInsuranceHero from "./car-insurance-hero.png";
@@ -62,13 +62,13 @@ export {
   KvdHero,
   Excalator,
   van,
-  sellHero,
-  exportHero,
+  SellHeroImage,
+  ExportHeroImage,
   saleMaking1,
   saleMaking2,
   saleMaking3,
   saleMaking4,
-  carGuide,
+  CarGuideImage,
   carLoanHero,
   carInsuranceHero,
   leaseHero,

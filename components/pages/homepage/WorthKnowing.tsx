@@ -12,7 +12,7 @@ const WorthKnowingCard: React.FC<{
 }> = ({ title, desc, link, img }) => {
   return (
     <Link
-      href=""
+      href={link}
       className="w-[17rem] h-[auto] bg-white rounded-lg overflow-hidden hover:shadow-2xl"
     >
       <div className="w-full h-[8rem] bg-slate-200 relative">

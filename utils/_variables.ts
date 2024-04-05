@@ -1,4 +1,11 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaAt,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaTwitter
+} from "react-icons/fa";
 import { convertObjectToArray } from "./functions";
 import {
   IconProps,
@@ -77,8 +84,16 @@ export const siteName = "Akandi Online",
       Icon: undefined,
       type: "link"
     },
+    CarGuide: {
+      path: "/car-guide",
+      label: "Car guide",
+      showIn: [],
+      activeIn: [],
+      Icon: undefined,
+      type: "link"
+    },
     SellCar: {
-      path: "/sell-used-cars",
+      path: "/sell",
       label: "Sell car",
       showIn: [otherServicesLink],
       activeIn: [],
@@ -109,6 +124,15 @@ export const siteName = "Akandi Online",
       Icon: undefined,
       type: "link"
     },
+    Pro: {
+      path: "/pro",
+      label: "Pro",
+      showIn: [],
+      activeIn: [],
+      Icon: undefined,
+      type: "link"
+    },
+
     CarLoan: {
       path: "/carloan",
       label: "Car loans and car warranty",
@@ -206,7 +230,7 @@ export const siteName = "Akandi Online",
       type: "link"
     },
 
-    work: {
+    Work: {
       path: "",
       label: "Work with us",
       showIn: [policiesLink],
@@ -214,7 +238,7 @@ export const siteName = "Akandi Online",
       Icon: undefined,
       type: "link"
     },
-    cookie: {
+    Cookies: {
       path: "",
       label: "cookies settings",
       showIn: [policiesLink],
@@ -228,25 +252,93 @@ export const siteName = "Akandi Online",
       img: HeavyTruck,
       title: "Heavy Vehicles at Akandi",
       desc: "heavy machinery & vehicles",
-      link: "kvdPro"
+      link: Routes.Pro.path
     },
     FindCars: {
       img: NeedCar,
       title: "Find the car for your needs",
       desc: "try our car guide today",
-      link: "carguide"
+      link: Routes.CarGuide.path
     },
     ExportCars: {
       img: Export,
       title: "Good-To-Know:Export",
       desc: "how to export through us",
-      link: "export"
+      link: Routes.Export.path
     },
     VehicleWorth: {
       img: CarWorth,
       title: "What is your car worth",
       desc: "get a valuation here",
-      link: "sell"
+      link: Routes.SellCar.path
+    }
+  },
+  CarGuideQuestions = {
+    SeatNumber: {
+      value: "seat-number",
+      title: "Number of seats",
+      subTitle: "How important is it...",
+      description: "that the car has room for more than five passengers?",
+      image: ""
+    },
+    LuggageSize: {
+      value: "luggage-size",
+      title: "Size of luggage compartment",
+      subTitle: "How important is it...",
+      description: "that the car has a large luggage compartment?",
+      image: ""
+    },
+    FuelType: {
+      value: "fuel-type",
+      title: "Type of fuel",
+      subTitle: "How important is it...",
+      description:
+        "that the car is driven, fully or partially, on electricity?",
+      image: ""
+    },
+    GearBoxType: {
+      value: "gear-box-type",
+      title: "Type of gearbox",
+      subTitle: "How important is it...",
+      description: "that the gearbox is automatic?",
+      image: ""
+    },
+    DriveSystem: {
+      value: "drive-system",
+      title: "The drive system",
+      subTitle: "How important is it...",
+      description:
+        "that the car has four-wheel drive and thus gets an extra good grip on winter roads?",
+      image: ""
+    },
+    TowBar: {
+      value: "tow-bar",
+      title: "Equipment: Tow bar",
+      subTitle: "How important is it...",
+      description: "that the car can tow?",
+      image: ""
+    },
+    GPSEnabled: {
+      value: "gps",
+      title: "Equipment: GPS",
+      subTitle: "How important is it...",
+      description: "that the car is equipped with GPS?",
+      image: ""
+    },
+    AutoBreak: {
+      value: "auto-break",
+      title: "Equipment: Auto break",
+      subTitle: "How important is it...",
+      description:
+        "that the car can warn or brake automatically in an emergency?",
+      image: ""
+    },
+    CarModel: {
+      value: "car-model",
+      title: "Model year",
+      subTitle: "How important is it...",
+      description: "the car is max five years old?",
+      image: ""
     }
   },
   Selections = {
@@ -506,10 +598,30 @@ export const siteName = "Akandi Online",
       Icon: FaLinkedin,
       label: "LinkedIn",
       link: "https://www.linkedin.com/in/"
+    },
+    Mail: {
+      Icon: FaAt,
+      label: "contact@akandionline.com",
+      link: "mailto:contact@akandionline.com",
+      show: false
+    },
+    ExportMail: {
+      Icon: FaAt,
+      label: "export@akandionline.com",
+      link: "mailto:export@akandionline.com",
+      show: false
+    },
+    Call: {
+      Icon: FaPhoneAlt,
+      label: "+44-309-3900",
+      link: "tel:+44-309-3900",
+      show: false
     }
   },
   allRoutes: RouteType[] = convertObjectToArray(Routes),
-  allSocials: SocialMediaList = convertObjectToArray(Socials),
+  allSocials: SocialMediaList = convertObjectToArray(Socials).filter(
+    (social) => social.show
+  ),
   otherServiceRoutes = allRoutes.filter((link) =>
     link.showIn.includes(otherServicesLink)
   ),
@@ -521,6 +633,7 @@ export const siteName = "Akandi Online",
     link.showIn.includes(policiesLink)
   ),
   allAboutContent = convertObjectToArray(AboutContent),
+  allCarGuideQuestions = convertObjectToArray(CarGuideQuestions),
   allWhyUsLink = convertObjectToArray(WhyUsLinks),
   allWorthKnowing = convertObjectToArray(WorthKnowing),
   allSelections = convertObjectToArray(Selections),

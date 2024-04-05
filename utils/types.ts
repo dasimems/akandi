@@ -138,6 +138,7 @@ export type SocialMedia = {
   label: string;
   link: string;
   Icon: IconType | React.FC<IconBaseProps> | undefined;
+  show?: boolean;
 };
 
 export type SocialMediaList = SocialMedia[];

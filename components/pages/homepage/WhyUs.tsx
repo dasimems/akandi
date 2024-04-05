@@ -1,10 +1,15 @@
 import SectionContainer from "@/components/layouts/SectionContainer";
-import { allAboutContent, allWhyUsLink, siteName } from "@/utils/_variables";
+import {
+  allAboutContent,
+  allWhyUsLink,
+  siteName,
+  Socials
+} from "@/utils/_variables";
 import { Call } from "iconsax-react";
 import { Mail } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import Button from "../Button";
+import Button from "../../general/Button";
 import Image from "next/image";
 
 const WhyUs = () => {
@@ -54,7 +59,7 @@ const WhyUs = () => {
             <span>
               <Call />
             </span>
-            <span>+44-309-3900</span>
+            <span>{Socials.Call.label}</span>
           </Link>
           <Link
             href=""

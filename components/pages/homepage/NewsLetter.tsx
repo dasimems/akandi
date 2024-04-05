@@ -1,8 +1,8 @@
 import SectionContainer from "@/components/layouts/SectionContainer";
 import React from "react";
-import InputField from "../form/InputField";
-import CheckBox from "../form/CheckBox";
-import Button from "../Button";
+import InputField from "../../general/form/InputField";
+import CheckBox from "../../general/form/CheckBox";
+import Button from "../../general/Button";
 
 const NewsLetter = () => {
   return (
